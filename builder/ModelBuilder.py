@@ -1,4 +1,5 @@
 import tensorflow as tf
+from sympy import false
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Dropout, Input, Embedding, GlobalAveragePooling1D
 from tensorflow.keras.optimizers import Adam
@@ -41,3 +42,10 @@ class ModelBuilder:
         self.__model.compile(loss='sparse_categorical_crossentropy', optimizer=adam, metrics=['accuracy'])
 
         return self.__model
+
+    def save(self,name:str):
+        try:
+            self.__model.save(name)
+            return True
+        except:
+            return False
