@@ -1,5 +1,5 @@
 from tensorflow.keras.callbacks import ReduceLROnPlateau
-from model_builder_trainer.ModelBuilder import *
+from builder.ModelBuilder import *
 
 class ModelTrainer:
 
