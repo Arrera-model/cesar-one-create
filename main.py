@@ -56,7 +56,7 @@ def main():
                             user_input = input("Vous : ")
                             if user_input.lower() == 'quit':
                                 break
-                            tag, confidence = bot.send_request(user_input, confidence_threshold=0.70)
+                            tag, confidence = arreraIALoad.send_request(user_input, confidence_threshold=0.70)
 
                             if tag:
                                 print(f"Bot: [Intention: {tag}] ({confidence:.2%})")
@@ -70,3 +70,6 @@ def main():
                     print("bye")
         except:
             print("Valeur invalide")
+
+if __name__ == "__main__":
+    main()
